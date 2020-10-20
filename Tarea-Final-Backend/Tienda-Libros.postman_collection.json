@@ -1,0 +1,650 @@
+{
+	"info": {
+		"_postman_id": "bc425e31-6f17-4126-aa34-53c522504b40",
+		"name": "Tienda-Libros",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Users - Crear Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"ana\",\r\n    \"email\": \"ana-admin@sample.com\",\r\n    \"password\": \"admin123\",\r\n    \"role\": \"ADMIN_ROLE\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"ana-admin@sample.com\",\r\n    \"password\": \"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authors - Create Author",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiYW5hIiwiZW1haWwiOiJhbmEtYWRtaW5Ac2FtcGxlLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJC9pZWhTZExhazlzR1FCT08xYk5XZi53VS8ucC9ZU2Q1T3NWNUpUYzJlanpGVzlOdTFPWUhHIiwicm9sZSI6IkFETUlOX1JPTEUiLCJzdGF0ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMC0xMC0yMFQwMTowMTozNC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyMC0xMC0yMFQwMTowMTozNC4wMDBaIn0sImlhdCI6MTYwMzE1NTc1NiwiZXhwIjoxNjA1NzQ3NzU2fQ.povWvD3tCFV6t-dCtUfXSANuNo31dn5wXm3FalBRz6w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Author 1\",\r\n    \"age\": 57,\r\n    \"nationality\": \"english\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authors - Get Author by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/authors/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authors - Get All Authors",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibWFyY2VsbyIsImVtYWlsIjoibWFyY2Vsby1hZG1pbkBzYW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkNmJFOHFaL2hLdHpSYU01cmJCM3ZqZUk5VkcvekVUS1ZZVkkwYVFVWXB5NmhEd252TUo1UzYiLCJyb2xlIjoiQURNSU5fUk9MRSIsInN0YXRlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTExVDE2OjQ4OjUwLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTExVDE2OjQ4OjUwLjAwMFoifSwiaWF0IjoxNjAyNDM0OTcyLCJleHAiOjE2MDUwMjY5NzJ9.dLfvHU_vR0aJosatkRW2mMAOPfNq78yrUv9Ij4d2cVU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/authors",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authors - Update Author",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibWFyY2VsbyIsImVtYWlsIjoibWFyY2Vsby1hZG1pbkBzYW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbVVUdEZDUk9OdFUwa0ZsaWRqcUNYdS9KS2pRZEJrRURjUjBCbnRhUzJEOWVHV01JV3NwSWUiLCJyb2xlIjoiQURNSU5fUk9MRSIsInN0YXRlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoifSwiaWF0IjoxNjAyNDI2NjE3LCJleHAiOjE2MDUwMTg2MTd9.DWgLfAlh_4orNA0mO5m7uQ89twLl02qrC8XfmuDx7x8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Author 1-updated\",\r\n    \"age\": 28,\r\n    \"nationality\": \"english\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/authors/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Authors - Delete Author",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibWFyY2VsbyIsImVtYWlsIjoibWFyY2Vsby1hZG1pbkBzYW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbVVUdEZDUk9OdFUwa0ZsaWRqcUNYdS9KS2pRZEJrRURjUjBCbnRhUzJEOWVHV01JV3NwSWUiLCJyb2xlIjoiQURNSU5fUk9MRSIsInN0YXRlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoifSwiaWF0IjoxNjAyNDI2NjE3LCJleHAiOjE2MDUwMTg2MTd9.DWgLfAlh_4orNA0mO5m7uQ89twLl02qrC8XfmuDx7x8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/authors/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"authors",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Books - Create Book",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiYW5hIiwiZW1haWwiOiJhbmEtYWRtaW5Ac2FtcGxlLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJC9pZWhTZExhazlzR1FCT08xYk5XZi53VS8ucC9ZU2Q1T3NWNUpUYzJlanpGVzlOdTFPWUhHIiwicm9sZSI6IkFETUlOX1JPTEUiLCJzdGF0ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMC0xMC0yMFQwMTowMTozNC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyMC0xMC0yMFQwMTowMTozNC4wMDBaIn0sImlhdCI6MTYwMzE1NTc1NiwiZXhwIjoxNjA1NzQ3NzU2fQ.povWvD3tCFV6t-dCtUfXSANuNo31dn5wXm3FalBRz6w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Book 2\",\r\n    \"description\": \"Libro de terror\",\r\n    \"price\": 120,\r\n    \"authorId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Books - Get Book by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Books - Get All Books",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibWFyY2VsbyIsImVtYWlsIjoibWFyY2Vsby1hZG1pbkBzYW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkNmJFOHFaL2hLdHpSYU01cmJCM3ZqZUk5VkcvekVUS1ZZVkkwYVFVWXB5NmhEd252TUo1UzYiLCJyb2xlIjoiQURNSU5fUk9MRSIsInN0YXRlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTExVDE2OjQ4OjUwLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTExVDE2OjQ4OjUwLjAwMFoifSwiaWF0IjoxNjAyNDM0OTcyLCJleHAiOjE2MDUwMjY5NzJ9.dLfvHU_vR0aJosatkRW2mMAOPfNq78yrUv9Ij4d2cVU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/books",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Books - Update Book",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibWFyY2VsbyIsImVtYWlsIjoibWFyY2Vsby1hZG1pbkBzYW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbVVUdEZDUk9OdFUwa0ZsaWRqcUNYdS9KS2pRZEJrRURjUjBCbnRhUzJEOWVHV01JV3NwSWUiLCJyb2xlIjoiQURNSU5fUk9MRSIsInN0YXRlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoifSwiaWF0IjoxNjAyNDI2NjE3LCJleHAiOjE2MDUwMTg2MTd9.DWgLfAlh_4orNA0mO5m7uQ89twLl02qrC8XfmuDx7x8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Book 1 - updated\",\r\n    \"description\": \"Libro de terror - updated\",\r\n    \"price\": 320\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Books - Delete Book",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibWFyY2VsbyIsImVtYWlsIjoibWFyY2Vsby1hZG1pbkBzYW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbVVUdEZDUk9OdFUwa0ZsaWRqcUNYdS9KS2pRZEJrRURjUjBCbnRhUzJEOWVHV01JV3NwSWUiLCJyb2xlIjoiQURNSU5fUk9MRSIsInN0YXRlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoifSwiaWF0IjoxNjAyNDI2NjE3LCJleHAiOjE2MDUwMTg2MTd9.DWgLfAlh_4orNA0mO5m7uQ89twLl02qrC8XfmuDx7x8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/books/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"books",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Carts - Create Cart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiYW5hIiwiZW1haWwiOiJhbmEtYWRtaW5Ac2FtcGxlLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJC9pZWhTZExhazlzR1FCT08xYk5XZi53VS8ucC9ZU2Q1T3NWNUpUYzJlanpGVzlOdTFPWUhHIiwicm9sZSI6IkFETUlOX1JPTEUiLCJzdGF0ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMC0xMC0yMFQwMTowMTozNC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyMC0xMC0yMFQwMTowMTozNC4wMDBaIn0sImlhdCI6MTYwMzE1NTc1NiwiZXhwIjoxNjA1NzQ3NzU2fQ.povWvD3tCFV6t-dCtUfXSANuNo31dn5wXm3FalBRz6w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nit\": \"DAFEFS387U\",\r\n    \"name\": \"cart 2\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/carts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Carts - Get Cart by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiYW5hIiwiZW1haWwiOiJhbmEtYWRtaW5Ac2FtcGxlLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJC9pZWhTZExhazlzR1FCT08xYk5XZi53VS8ucC9ZU2Q1T3NWNUpUYzJlanpGVzlOdTFPWUhHIiwicm9sZSI6IkFETUlOX1JPTEUiLCJzdGF0ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMC0xMC0yMFQwMTowMTozNC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyMC0xMC0yMFQwMTowMTozNC4wMDBaIn0sImlhdCI6MTYwMzE1NTc1NiwiZXhwIjoxNjA1NzQ3NzU2fQ.povWvD3tCFV6t-dCtUfXSANuNo31dn5wXm3FalBRz6w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/carts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Carts - Get All Carts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibWFyY2VsbyIsImVtYWlsIjoibWFyY2Vsby1hZG1pbkBzYW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkNmJFOHFaL2hLdHpSYU01cmJCM3ZqZUk5VkcvekVUS1ZZVkkwYVFVWXB5NmhEd252TUo1UzYiLCJyb2xlIjoiQURNSU5fUk9MRSIsInN0YXRlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTExVDE2OjQ4OjUwLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTExVDE2OjQ4OjUwLjAwMFoifSwiaWF0IjoxNjAyNDM0OTcyLCJleHAiOjE2MDUwMjY5NzJ9.dLfvHU_vR0aJosatkRW2mMAOPfNq78yrUv9Ij4d2cVU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/carts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Carts - Update Cart",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibWFyY2VsbyIsImVtYWlsIjoibWFyY2Vsby1hZG1pbkBzYW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbVVUdEZDUk9OdFUwa0ZsaWRqcUNYdS9KS2pRZEJrRURjUjBCbnRhUzJEOWVHV01JV3NwSWUiLCJyb2xlIjoiQURNSU5fUk9MRSIsInN0YXRlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoifSwiaWF0IjoxNjAyNDI2NjE3LCJleHAiOjE2MDUwMTg2MTd9.DWgLfAlh_4orNA0mO5m7uQ89twLl02qrC8XfmuDx7x8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nit\": \"RWERWE\",\r\n    \"name\": \"cart 1 - updated\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/carts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Carts - Delete Cart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibWFyY2VsbyIsImVtYWlsIjoibWFyY2Vsby1hZG1pbkBzYW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbVVUdEZDUk9OdFUwa0ZsaWRqcUNYdS9KS2pRZEJrRURjUjBCbnRhUzJEOWVHV01JV3NwSWUiLCJyb2xlIjoiQURNSU5fUk9MRSIsInN0YXRlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoifSwiaWF0IjoxNjAyNDI2NjE3LCJleHAiOjE2MDUwMTg2MTd9.DWgLfAlh_4orNA0mO5m7uQ89twLl02qrC8XfmuDx7x8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/carts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"carts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookCarts - Create BookCart",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiYW5hIiwiZW1haWwiOiJhbmEtYWRtaW5Ac2FtcGxlLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJC9pZWhTZExhazlzR1FCT08xYk5XZi53VS8ucC9ZU2Q1T3NWNUpUYzJlanpGVzlOdTFPWUhHIiwicm9sZSI6IkFETUlOX1JPTEUiLCJzdGF0ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMC0xMC0yMFQwMTowMTozNC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyMC0xMC0yMFQwMTowMTozNC4wMDBaIn0sImlhdCI6MTYwMzE1NTc1NiwiZXhwIjoxNjA1NzQ3NzU2fQ.povWvD3tCFV6t-dCtUfXSANuNo31dn5wXm3FalBRz6w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantity\": 2,\r\n    \"bookId\": 1,\r\n    \"cartId\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/book_carts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book_carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookCarts - Get BookCart by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoiYW5hIiwiZW1haWwiOiJhbmEtYWRtaW5Ac2FtcGxlLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJC9pZWhTZExhazlzR1FCT08xYk5XZi53VS8ucC9ZU2Q1T3NWNUpUYzJlanpGVzlOdTFPWUhHIiwicm9sZSI6IkFETUlOX1JPTEUiLCJzdGF0ZSI6dHJ1ZSwiY3JlYXRlZEF0IjoiMjAyMC0xMC0yMFQwMTowMTozNC4wMDBaIiwidXBkYXRlZEF0IjoiMjAyMC0xMC0yMFQwMTowMTozNC4wMDBaIn0sImlhdCI6MTYwMzE1NTc1NiwiZXhwIjoxNjA1NzQ3NzU2fQ.povWvD3tCFV6t-dCtUfXSANuNo31dn5wXm3FalBRz6w",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/book_carts/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book_carts",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookCarts - Get All BookCarts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibWFyY2VsbyIsImVtYWlsIjoibWFyY2Vsby1hZG1pbkBzYW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkNmJFOHFaL2hLdHpSYU01cmJCM3ZqZUk5VkcvekVUS1ZZVkkwYVFVWXB5NmhEd252TUo1UzYiLCJyb2xlIjoiQURNSU5fUk9MRSIsInN0YXRlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTExVDE2OjQ4OjUwLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTExVDE2OjQ4OjUwLjAwMFoifSwiaWF0IjoxNjAyNDM0OTcyLCJleHAiOjE2MDUwMjY5NzJ9.dLfvHU_vR0aJosatkRW2mMAOPfNq78yrUv9Ij4d2cVU",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/book_carts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book_carts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookCarts - Update BookCart",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibWFyY2VsbyIsImVtYWlsIjoibWFyY2Vsby1hZG1pbkBzYW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbVVUdEZDUk9OdFUwa0ZsaWRqcUNYdS9KS2pRZEJrRURjUjBCbnRhUzJEOWVHV01JV3NwSWUiLCJyb2xlIjoiQURNSU5fUk9MRSIsInN0YXRlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoifSwiaWF0IjoxNjAyNDI2NjE3LCJleHAiOjE2MDUwMTg2MTd9.DWgLfAlh_4orNA0mO5m7uQ89twLl02qrC8XfmuDx7x8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quantity\": 6\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/book_carts/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book_carts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "BookCarts - Delete BookCart",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7ImlkIjoxLCJuYW1lIjoibWFyY2VsbyIsImVtYWlsIjoibWFyY2Vsby1hZG1pbkBzYW1wbGUuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkbVVUdEZDUk9OdFUwa0ZsaWRqcUNYdS9KS2pRZEJrRURjUjBCbnRhUzJEOWVHV01JV3NwSWUiLCJyb2xlIjoiQURNSU5fUk9MRSIsInN0YXRlIjp0cnVlLCJjcmVhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoiLCJ1cGRhdGVkQXQiOiIyMDIwLTEwLTExVDE0OjI5OjUyLjAwMFoifSwiaWF0IjoxNjAyNDI2NjE3LCJleHAiOjE2MDUwMTg2MTd9.DWgLfAlh_4orNA0mO5m7uQ89twLl02qrC8XfmuDx7x8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/book_carts/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"book_carts",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
